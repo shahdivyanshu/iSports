@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}iSports{% endblock title %}\
+
+{% block body %}
+
+
+<div class="container my-3">
+    <div class="jumbotron">
+        <h2 class="display-4">Welcome to iSports!</h2>
+        <hr class="my-4">
+        
+        <a class="btn btn-primary btn-5g" href="/blog" role="button">Go to Blog</a>
+    </div>
+</div>
+
+<div class="container">
+    <h3>Popular blogposts:</h3>
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-200 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Sports Article</strong>
+            <h3 class="mb-0">Cricket Rules</h3>
+            <div class="mb-1 text-muted">2021-08-02</div>
+            <p class="card-text mb-auto">Cricket is an Australian national pastime. It’s played all over the country, watched and loved by millions, and our national cricket team are looked up to as heroes by kids of all ages. Cricket is also a fun, social game to play, that’s easy to learn and can be enjoyed by boys and girls from as young as 5 years old.......</p>
+            <a href="/blog/First-post" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+
+        </div>
+    </div> 
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row my-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-primary">Sports Article</strong>
+            <h3 class="mb-0">Baseball Rules</h3>
+            <div class="mb-1 text-muted">2021-08-12</div>
+            <p class="card-text mb-auto">A baseball game is played between two teams of nine players who each have nine innings.
+These innings are divided in half with the visiting team hitting at the ‘top’ of the inning and the home team at the ‘bottom.......’  </p>
+            <a href="/blog/Baseball Rules" class="stretched-link">Continue reading</a>
+        </div>
+        <div class="col-auto d-none d-lg-block">
+
+        </div>
+    </div>
+    {% if user.is_authenticated %}
+    <div class="container my-3 mx-5">
+
+    <a class="btn btn-primary btn-5g" href="/blog/createblog" role="button">Write your blog</a> <a class="btn btn-primary btn-5g" href="/blog/userblogs" role="button">Your blogs</a></div>
+
+    {% else %}
+    <div class="container">
+    <h3>Please Login to write your blogs</h3>
+    </div>
+{% endif %}
+    
+</div>
+
+
+
+
+
+
+{% endblock body %}
